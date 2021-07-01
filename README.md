@@ -38,6 +38,9 @@ rails g controller Events
 rails g controller Repos
 ```
 
+## Software Installation
+### Install PostgreSQL
+```sh
 sudo apt-get update && sudo apt-get install -y lsb-release && sudo apt-get clean all
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
@@ -49,6 +52,7 @@ sudo apt install postgresql-contrib libpq-dev
 # gem install pg -v 1.1.3 -- --with-pg-config=/usr/pgsql-9.X/bin/pg_config
 # gem install pg -v 1.1.3 -- --with-pg-config=/usr/lib/postgresql/13/bin/pg_config
 # gem install pg -v 1.1.3 -- --with-pg-config=$(which pg_config)
+```
 
 ## Deploy your application to Heroku
 ```sh
